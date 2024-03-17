@@ -22,7 +22,7 @@ parser.add_argument('--iter', dest='iter', type=int, help='iter', default=0)
 parser.add_argument('--template_id', dest='template_id', type=int, help='template_id', default=4)
 args = parser.parse_args()
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
 batch_size = 64
